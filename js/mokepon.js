@@ -418,7 +418,17 @@ function enviarPosicion(x, y) {
             x,
             y
         })
+
     })
+          .then(function (res) {
+            if (res.ok) {
+                res.json()
+                    .then(function ({ enemigos }) {
+                        console.log(enemigos)
+                    })
+            }
+          }) 
+    
 }
 
 function moverDerecha() {
