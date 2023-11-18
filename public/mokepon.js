@@ -169,8 +169,6 @@ function unirseAlJuego() {
 }
 
 function seleccionarMascotaJugador() {
-    sectionSeleccionarMascotas.style.display = 'none'  
-
     if (inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
         mascotaJugador = inputHipodoge.id
@@ -182,7 +180,10 @@ function seleccionarMascotaJugador() {
         mascotaJugador = inputRatigueya.id
     } else {
         alert('Selecciona una Mascota')
+        return
     }
+
+    sectionSeleccionarMascotas.style.display = 'none' 
 
     seleccionarMokepon(mascotaJugador)
 
